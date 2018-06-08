@@ -30,17 +30,15 @@ jobs:
           command: test/repo-sync.sh
 workflows:
   version: 2
-  lint:
+  sync:
+    # triggers:
+    #   - schedule:
+    #       cron: "23,53 * * * *"
+    #       filters:
+    #         branches:
+    #           only:
+    #             - master
     jobs:
       - lint-scripts
       - lint-charts
-  sync:
-    triggers:
-      - schedule:
-          cron: "23,53 * * * *"
-          filters:
-            branches:
-              only:
-                - master
-    jobs:
       - sync
