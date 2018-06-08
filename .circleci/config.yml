@@ -41,7 +41,7 @@ workflows:
     jobs:
       - lint-scripts
       - lint-charts
-      - sync
+      - sync:
           requires:
             - lint-scripts
             - lint-charts
