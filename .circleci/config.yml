@@ -42,3 +42,6 @@ workflows:
       - lint-scripts
       - lint-charts
       - sync
+          requires:
+            - lint-scripts
+            - lint-charts
