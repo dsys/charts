@@ -1,13 +1,13 @@
 {{- if .Values.ingress.enabled -}}
-{{- $fullName := include "eth-explorer.fullname" . -}}
+{{- $fullName := include "multi-api.fullname" . -}}
 {{- $ingressPath := .Values.ingress.path -}}
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: {{ $fullName }}
   labels:
-    app: {{ template "eth-explorer.name" . }}
-    chart: {{ template "eth-explorer.chart" . }}
+    app: {{ template "multi-api.name" . }}
+    chart: {{ template "multi-api.chart" . }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
 {{- with .Values.ingress.annotations }}

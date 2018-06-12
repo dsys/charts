@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ template "eth-explorer.fullname" . }}
+  name: {{ template "multi-api.fullname" . }}
   labels:
-    app: {{ template "eth-explorer.name" . }}
-    chart: {{ template "eth-explorer.chart" . }}
+    app: {{ template "multi-api.name" . }}
+    chart: {{ template "multi-api.chart" . }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
 spec:
@@ -15,5 +15,5 @@ spec:
       protocol: TCP
       name: http
   selector:
-    app: {{ template "eth-explorer.name" . }}
+    app: {{ template "multi-api.name" . }}
     release: {{ .Release.Name }}
