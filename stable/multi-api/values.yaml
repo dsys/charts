@@ -4,6 +4,9 @@
 
 settings:
   infuraAPIKey: ""
+  prisma:
+    endpoint: http://prisma:4466
+    managementApiKey: ""
 
 replicaCount: 1
 

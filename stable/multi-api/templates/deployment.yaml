@@ -38,6 +38,10 @@ spec:
           env:
           - name: INFURA_API_KEY
             value: "{{ .Values.settings.infuraAPIKey }}"
+          - name: PRISMA_ENDPOINT
+            value: "{{ .Values.settings.prisma.endpoint }}"
+          - name: PRISMA_MANAGEMENT_API_KEY
+            value: "{{ .Values.settings.prisma.managementApiKey }}"
           resources:
 {{ toYaml .Values.resources | indent 12 }}
     {{- with .Values.nodeSelector }}
