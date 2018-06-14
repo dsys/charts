@@ -8,6 +8,10 @@ settings:
   prisma:
     endpoint: http://prisma:4466
     managementApiKey: ""
+  twilio:
+    accountSid: "0000000000000000000000000000000000"
+    apiKey: "00000000000000000000000000000000"
+    fromNumber: "+12345678900"
 
 replicaCount: 1
 
