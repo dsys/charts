@@ -3,6 +3,7 @@
 # Declare variables to be passed into your templates.
 
 settings:
+  redisURL: redis://redis:6379/0
   infuraAPIKey: ""
   prisma:
     endpoint: http://prisma:4466
