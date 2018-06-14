@@ -7,7 +7,7 @@ settings:
   infuraAPIKey: ""
   prisma:
     endpoint: http://prisma:4466
-    managementApiKey: ""
+    managementApiSecret: ""
   twilio:
     accountSid: "0000000000000000000000000000000000"
     apiKey: "00000000000000000000000000000000"
