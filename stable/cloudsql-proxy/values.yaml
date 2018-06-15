@@ -3,7 +3,7 @@
 # Declare variables to be passed into your templates.
 
 settings:
-  instanceConnectionName: multi-app-gcp:us-central1:multi-app-staging
+  instanceConnectionName: "gcp-project:gcp-region:gcp-instance"
   iamCredentials: "{}"
 
 image:
