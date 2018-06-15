@@ -27,7 +27,7 @@ spec:
             value: "{{ .Values.settings.prisma.endpoint }}"
           - name: PRISMA_MANAGEMENT_API_SECRET
             value: "{{ .Values.settings.prisma.managementApiSecret }}"
-          command: [ "yarn", "prisma", "deploy" ]
+          command: [ "./deploy.sh" ]
           resources:
 {{ toYaml .Values.resources | indent 12 }}
     {{- with .Values.nodeSelector }}
