@@ -6,6 +6,7 @@ settings:
   redisURL: redis://redis:6379/0
   infuraAPIKey: ""
   etherscanAPIKey: ""
+  globalPhoneNumberSalt: ""
   prisma:
     endpoint: http://prisma:4466
     managementApiSecret: ""

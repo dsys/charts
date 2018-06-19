@@ -52,6 +52,8 @@ spec:
             value: "{{ .Values.settings.twilio.apiKey }}"
           - name: TWILIO_FROM_NUMBER
             value: "{{ .Values.settings.twilio.fromNumber }}"
+          - name: GLOBAL_PHONE_NUMBER_SALT
+            value: "{{ .Values.settings.globalPhoneNumberSalt }}"
           resources:
 {{ toYaml .Values.resources | indent 12 }}
     {{- with .Values.nodeSelector }}
