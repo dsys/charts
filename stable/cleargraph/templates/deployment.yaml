@@ -54,6 +54,8 @@ spec:
             value: "{{ .Values.settings.twilio.fromNumber }}"
           - name: GLOBAL_PHONE_NUMBER_SALT
             value: "{{ .Values.settings.globalPhoneNumberSalt }}"
+          - name: APOLLO_ENGINE_KEY
+            value: "{{ .Values.settings.apolloEngineKey }}"
           resources:
 {{ toYaml .Values.resources | indent 12 }}
     {{- with .Values.nodeSelector }}

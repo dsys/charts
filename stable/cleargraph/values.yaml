@@ -7,6 +7,7 @@ settings:
   infuraAPIKey: ""
   etherscanAPIKey: ""
   globalPhoneNumberSalt: ""
+  apolloEngineKey: ""
   prisma:
     endpoint: http://prisma:4466
     managementApiSecret: ""
