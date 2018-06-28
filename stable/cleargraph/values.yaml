@@ -1,4 +1,4 @@
-# Default values for multi-api.
+# Default values for cleargraph.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
@@ -18,7 +18,7 @@ settings:
 replicaCount: 1
 
 image:
-  repository: dsys/multi-api
+  repository: dsys/cleargraph
   tag: latest
   pullPolicy: IfNotPresent
 

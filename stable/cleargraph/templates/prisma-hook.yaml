@@ -1,10 +1,10 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: {{ template "multi-api.fullname" . }}-prisma-hook
+  name: {{ template "cleargraph.fullname" . }}-prisma-hook
   labels:
-    app: {{ template "multi-api.name" . }}-prisma-hook
-    chart: {{ template "multi-api.chart" . }}
+    app: {{ template "cleargraph.name" . }}-prisma-hook
+    chart: {{ template "cleargraph.chart" . }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
   annotations:
@@ -14,7 +14,7 @@ spec:
   template:
     metadata:
       labels:
-        app: {{ template "multi-api.name" . }}-prisma-hook
+        app: {{ template "cleargraph.name" . }}-prisma-hook
         release: {{ .Release.Name }}
     spec:
       restartPolicy: Never

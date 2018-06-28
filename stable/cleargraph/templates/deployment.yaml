@@ -1,22 +1,22 @@
 apiVersion: apps/v1beta2
 kind: Deployment
 metadata:
-  name: {{ template "multi-api.fullname" . }}
+  name: {{ template "cleargraph.fullname" . }}
   labels:
-    app: {{ template "multi-api.name" . }}
-    chart: {{ template "multi-api.chart" . }}
+    app: {{ template "cleargraph.name" . }}
+    chart: {{ template "cleargraph.chart" . }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: {{ template "multi-api.name" . }}
+      app: {{ template "cleargraph.name" . }}
       release: {{ .Release.Name }}
   template:
     metadata:
       labels:
-        app: {{ template "multi-api.name" . }}
+        app: {{ template "cleargraph.name" . }}
         release: {{ .Release.Name }}
     spec:
       containers:

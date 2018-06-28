@@ -1,13 +1,13 @@
 {{- if .Values.ingress.enabled -}}
-{{- $fullName := include "multi-api.fullname" . -}}
+{{- $fullName := include "cleargraph.fullname" . -}}
 {{- $ingressPath := .Values.ingress.path -}}
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: {{ $fullName }}
   labels:
-    app: {{ template "multi-api.name" . }}
-    chart: {{ template "multi-api.chart" . }}
+    app: {{ template "cleargraph.name" . }}
+    chart: {{ template "cleargraph.chart" . }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
 {{- with .Values.ingress.annotations }}
